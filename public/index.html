@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awélé - Version Distante (AJAX)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AWÉLÉ <span class="badge">MULTIJOUEUR</span></h1>
+        
+        <div class="connection-status" id="connectionStatus">
+            🔌 Connexion en cours...
+        </div>
+        
+        <div class="game-info">
+            <div class="scores">
+                <div class="score-card" id="scoreNord">
+                    <h3>JOUEUR NORD <span id="nordPlayerStatus">(en attente)</span></h3>
+                    <span class="score-value" id="nordScore">0</span>
+                </div>
+                <div class="score-card" id="scoreSud">
+                    <h3>JOUEUR SUD <span id="sudPlayerStatus">(en attente)</span></h3>
+                    <span class="score-value" id="sudScore">0</span>
+                </div>
+            </div>
+            <div class="turn-indicator" id="turnIndicator">
+                <span id="turnMessage">En attente des joueurs...</span>
+            </div>
+            <div class="message" id="message"></div>
+            <button id="resetButton" class="reset-btn">🔄 Nouvelle partie</button>
+        </div>
+
+        <!-- Plateau Nord -->
+        <div class="board north-board">
+            <div class="camp-label">🏔️ CAMP NORD</div>
+            <div class="cells" id="northCells"></div>
+        </div>
+
+        <!-- Plateau Sud -->
+        <div class="board south-board">
+            <div class="cells" id="southCells"></div>
+            <div class="camp-label">🌴 CAMP SUD</div>
+        </div>
+
+        <div class="info-panel">
+            <div class="player-info" id="playerInfo">
+                👤 Vous n'êtes pas encore connecté
+            </div>
+            <div class="ping-info" id="pingInfo"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
