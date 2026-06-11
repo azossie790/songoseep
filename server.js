@@ -168,6 +168,3 @@ app.post('/api/reset/:roomCode', (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Serveur Awélé sur http://localhost:${PORT}`);
 });
-    console.log(`Serveur Awélé démarré sur http://localhost:${PORT}`);
-    console.log(`Deux joueurs peuvent se connecter pour jouer en ligne !`);
-});
